@@ -13,7 +13,7 @@ $consulta = "INSERT INTO ventas (num_factura, dui, cod_producto, fecha_venta, ca
 
 $resultado = mysqli_query($conexion, $consulta);
 if($resultado){
-        $consultaRestarProducto = "UPDATE productos set cantidad = cantidad - '$cantidad'";
+        $consultaRestarProducto = "UPDATE productos set cantidad = cantidad - '$cantidad' where cod_producto = '$codigo' ";
 
     $resultadoRestarProductos = mysqli_query($conexion, $consultaRestarProducto);
     if($resultadoRestarProductos){
@@ -24,7 +24,7 @@ if($resultado){
 
     ?> <div style="width: 100%; color: white; background-color: green; text-align: center; padding: 3px; " > Venta efectuada Correctamente! </div> <?php
 }else{
-    ?> <div style="width: 100%; color: white; background-color: red; text-align: center; padding: 3px; " > Error al efectuar la compra! </div> <?php
+    ?> <div style="width: 100%; color: white; background-color: red; text-align: center; padding: 3px; " > Error al efectuar la Venta! </div> <?php
 }
 }
 }

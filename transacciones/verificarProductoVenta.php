@@ -40,7 +40,7 @@ if(mysqli_num_rows($resultado) > 0){
 
 <?php
 }else{
-header("location: ../productos/frmAgregarProductos");
+header("location: ../productos/frmAgregarProducto.php");
 }
 
 }

@@ -13,7 +13,7 @@ $consulta = "INSERT INTO compras (num_factura, nrc_proveedor, cod_producto, fech
 
 $resultado = mysqli_query($conexion, $consulta);
 if($resultado){
-        $consultaAgregarProducto = "UPDATE productos set cantidad = cantidad + '$cantidad'";
+        $consultaAgregarProducto = "UPDATE productos set cantidad = cantidad + '$cantidad' where cod_producto = '$codigo' ";
 
     $resultadoAgregarProductos = mysqli_query($conexion, $consultaAgregarProducto);
     if($resultadoAgregarProductos){

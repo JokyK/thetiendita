@@ -9,7 +9,7 @@ $fechaRegistro = $_POST['fechaRegistro'];
 $consulta = "INSERT INTO usuarios values ('$nombre','$contra','$tipoUsuario','$fechaRegistro')";
 $resultado = mysqli_query($conexion, $consulta);
 if($resultado){
-    echo 'Regisro Agregado Correctamente <a href="loginUsuario.html">INICIA SESIÓN</a>';
+    echo 'Regisro Agregado Correctamente <a href="index.html">INICIA SESIÓN</a>';
 }else{
     echo "Error al ingresar el registro de usuario";
 }
